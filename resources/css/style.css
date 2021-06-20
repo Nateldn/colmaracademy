@@ -1,8 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 
 html {
  background-color: #fff;
  font-size: 17px;
  font-family: 'Roboto', sans-serif;
+ color: rgb(58 58 58);
+
 }
 
 mark {
@@ -21,8 +27,8 @@ body {
 
 }
 section {
-  max-width: 95%;
-  margin: 3rem auto;
+
+ margin: 3rem 32px;
 }
 
 
@@ -64,8 +70,8 @@ nav {
   padding-right:
 }
 
-#svg {
-
+svg {
+fill: white;
 }
 
 .logo.title p {
@@ -93,17 +99,16 @@ ul.menu {
 }
 
 
-.menu li a {
+.menu li a, .footlinks a  {
   text-decoration: none;
   color: rgba(224,224,206);
   font-size: 0.85rem;
   font-weight: normal;
   text-transform: uppercase;
   transition: all 600ms linear;
-
 }
 
-.menu li a:hover {
+.menu li a:hover, .footlinks a:hover {
   font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
@@ -122,7 +127,7 @@ ul.menu {
 
 .splash {
   max-width: 95%;
-  margin: 6rem auto;
+  margin: 3.8rem auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -151,6 +156,8 @@ h1 {
 h1 span {
   /*background-color: rgb(224,224,206);*/
   font-size: 2.7rem;
+  background-color: rgb(44,43,60);
+  color: white;
 }
 
 .splash h1 mark {
@@ -167,24 +174,32 @@ h1 span {
 
 
 button {
-  padding: 20px;
-  font-size: 1.3em;
-  margin: 0 auto;
-  background-color: rgb(236,78,32);
-  border: 1px solid rgb(236,78,32);
+  padding: 20px 40px;
+    font-size: 1.3em;
+    margin: 0 auto;
+    background-color: rgb(236,78,32);
+    border: 1px solid rgb(236,78,32);
+    text-transform: uppercase;
+    transition: all 600ms linear;
 
+}
+
+button:hover {
+  background-color: rgba(236,78,32, 0.7);
+  border: 1px solid rgba(236,78,32,0.7);
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 button a {
   text-decoration: none;
   text-align: center;
   color: rgb(224,224,206);
-  transition: all 600ms linear;
+
 }
 
 button a:hover {
-  font-size: 2rem;
-  font-weight: bold;
+
 
 }
 
@@ -193,7 +208,6 @@ button a:hover {
 .academyinfo {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .academyinfo h2 {
@@ -205,7 +219,7 @@ button a:hover {
 .practise {
   width: 60%;
   overflow: hidden;
-  margin-right: 10px
+  margin-right: 10px;
 }
 
 .practise img {
@@ -216,14 +230,16 @@ button a:hover {
 
 }
 .practise p {
-  font-size: 1rem;
   font-weight: 200;
+  font-size: 0.9rem;
+
 }
 
-.quotename {
-  font-weight: 200;
+p.quotename {
+  font-weight: bold;
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 /*-- Information --*/
@@ -235,14 +251,14 @@ button a:hover {
 }
 
 .info_item {
-  width: 100%;
-overflow: hidden;
-display: flex;
-justify-content: space-around;
-/* padding: 10px; */
-margin-bottom: 10px;
-padding: 1.3rem;
-transition: background-color 750ms linear;
+  width: 90%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  /* padding: 10px; */
+  margin-bottom: 10px;
+  padding: 1.3rem;
+  transition: background-color 750ms linear;
 }
 
 .info_item:hover {
@@ -261,14 +277,9 @@ transition: background-color 750ms linear;
 }
 
 .info_item button:hover {
-  font-size: 1rem;
-  font-weight: bold;
   background-color: rgba(236,78,32, 0.5);
-  border: 1px solid rgba(236,78,32, 0.5);
+  border: 1px solid rgba(236,78,32, 0.1);
 }
-
-
-
 
 
 .info_item img {
@@ -304,78 +315,174 @@ transition: background-color 750ms linear;
 
 
 /*-- Start Learning Courses --*/
+#fullwidth {
+ background-color:  rgba(224,224,206, 0.5);
+ margin: 0;
+}
+
+#courses {
+  width: 100%;
+  background-color: rgb(44,43,60);
+  color: rgb(224,224,206);
+  /*padding: 10px 0 10px 0;*/
+}
+ #courses h2, #thesis_exhibit h2 {
+  font-size: 3em;
+    letter-spacing: -2px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 .learning {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
 
-.learning div {
-  width: 30%;
-  margin: 10px;
-  height: 300px;
-  overflow: hidden;
-}
+.learning a {
+width: 30%;
+margin: 10px;
+height: 300px;
+overflow: hidden;
+text-decoration: none;
+font-size: 0.75em;
+background-color: white;
+color: rgb(77 77 77);
+border-radius: 2px solid;
 
-.learning div img {
+
+}
+.learning a img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
+.course_info p {
+  padding: 10px;
+  font-weight: 200;
+  font-size: 0.80rem;
+}
+
+.course_info p span {
+  color: white;
+    background-color: #ec4e20;
+    padding: 5px;
+    font-size: 0.7rem;
+
+}
+
+.learning a h3 {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
 /*-- Thesis Exhibit --*/
+
+#thesis_exhibit {
+  margin: 1.2rem;
+
+}
+
+#thesis_exhibit h2 {
+  background-color: rgb(44,43,60);
+  color: rgb(224,224,206);
+}
+
 .thesis {
   width: 100%;
   display: flex;
   justify-content: space-around;
+
 }
 
 .promovid {
-  width: 70%;
+  width: 60%;
+  height: auto;
+  overflow: hidden;
+
+}
+
+.promovid h3 {
+  font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: -2px;
+
 }
 
 video {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 
-.thesis div {
-
-}
-
-
-.promovid {
-
-}
 
 .exhibit_info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 100%;
-
+  width: 30%;
 }
 
-/*.exhibit_info div {
-  width: 100%;
-
-} */
 
 
 .exhibit_info_item {
   overflow: hidden;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
 }
 
 .exhibit_info_item img {
   height: auto;
-  width: 50%;
+  width: 35%;
+  display: block;
+  padding: 16px;
+}
+
+.exhibit_info_item div {
+  width: 65%;
+}
+
+/* Footer */
+footer {
+  padding: 24px;
+  background-color: rgb(44,43,60);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  color: rgb(224,224,206);
+  font-size: 0.85rem;
+  font-weight: 200;
+}
+
+.footlinks ul {
+   list-style-type: none;
+}
+
+.footlinks ul li {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.footlinks a {
+
+}
+
+.footlinks a:hover {
+
 }
