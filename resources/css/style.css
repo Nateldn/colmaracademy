@@ -322,16 +322,15 @@ p.quotename {
 
 #courses {
   width: 100%;
-  background-color: rgb(44,43,60);
-  color: rgb(224,224,206);
   /*padding: 10px 0 10px 0;*/
 }
- #courses h2, #thesis_exhibit h2 {
-  font-size: 3em;
-    letter-spacing: -2px;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
+ #courses h2 {
+	 font-size: 2.5em;
+   letter-spacing: -2px;
+   text-align: center;
+   font-weight: bold;
+	color: white;
+	padding: 32px
 }
 
 .learning {
@@ -341,6 +340,10 @@ p.quotename {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.learning:hover {
+	color: white;
 }
 
 
@@ -354,9 +357,17 @@ font-size: 0.75em;
 background-color: white;
 color: rgb(77 77 77);
 border-radius: 2px solid;
-
+transition: all .60s linear;
 
 }
+
+.learning a:hover {
+	background-color: rgb(44,43,60);
+	color: rgb(224,224,206);
+	font-weight: bold;
+
+}
+
 .learning a img {
     max-width: 100%;
     height: auto;
@@ -369,13 +380,17 @@ border-radius: 2px solid;
   font-size: 0.80rem;
 }
 
+
+
+
 .course_info p span {
   color: white;
     background-color: #ec4e20;
     padding: 5px;
     font-size: 0.7rem;
-
 }
+
+
 
 .learning a h3 {
     text-align: center;
@@ -383,6 +398,9 @@ border-radius: 2px solid;
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+
 
 /*-- Thesis Exhibit --*/
 
@@ -392,8 +410,11 @@ border-radius: 2px solid;
 }
 
 #thesis_exhibit h2 {
-  background-color: rgb(44,43,60);
-  color: rgb(224,224,206);
+	font-size: 2.5em;
+  letter-spacing: -2px;
+  text-align: center;
+  font-weight: bold;
+	padding: 32px;
 }
 
 .thesis {
