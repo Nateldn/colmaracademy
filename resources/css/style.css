@@ -192,15 +192,12 @@ button:hover {
 
 button a {
   text-decoration: none;
-  text-align: center;
+  /*text-align: center;*/
   color: rgb(224,224,206);
 
 }
 
-button a:hover {
 
-
-}
 
 /* Keep Practising */
 
@@ -219,7 +216,6 @@ button a:hover {
 .practise {
   width: 60%;
   overflow: hidden;
-  margin-right: 10px;
 }
 
 .practise img {
@@ -283,14 +279,14 @@ p.quotename {
 
 
 .info_item img {
-  max-width: 30%;
+  width: 30%;
   height: auto;
   display: block;
 
 }
 
 .info_item div {
-  min-width: 70%;
+  width: 70%;
   margin-left: 10px;
 
 }
@@ -306,9 +302,7 @@ p.quotename {
 
 }
 
-.info_item .mobile {
- display: none;
-}
+
 
 
 /*-- Start Learning Courses --*/
@@ -347,13 +341,14 @@ p.quotename {
 .learning a {
 width: 30%;
 margin: 10px;
-height: 300px;
+height: auto;
 overflow: hidden;
 text-decoration: none;
 font-size: 0.75em;
 background-color: white;
 color: rgb(58 58 58);
 transition: all .60s linear;
+border-radius: 2px;
 
 }
 
@@ -361,6 +356,7 @@ transition: all .60s linear;
 	background-color: rgb(44,43,60);
 	color: rgb(224,224,206);
 	font-weight: bold;
+
 
 }
 
@@ -424,13 +420,12 @@ transition: all .60s linear;
   width: 60%;
   height: auto;
   overflow: hidden;
-
 }
 
 .promovid h3 {
   font-size: 2rem;
-      font-weight: bold;
-      letter-spacing: -2px;
+  font-weight: bold;
+  letter-spacing: -2px;
 }
 
 .promovid p {
@@ -515,8 +510,11 @@ footer {
 
 /*---- Media Queries --- */
 
-@media only screen and (min-width: 300px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
     /* ruleset for 320px - 480px */
+
+
+		/*-- Navigation & Branding --*/
 		.mobile_menu {
 			display: flex;
 			list-style-type: none;
@@ -549,6 +547,7 @@ ul.menu li {
 		margin: 0;
 	}
 
+/* !-- Splash Image and Text --*/
 	.splash {
     display: block;
 		width: 100%;
@@ -556,7 +555,7 @@ ul.menu li {
 	}
 
 	.splash img {
-	  min-width: 100%;
+	  width: 100%;
 		height: auto;
 	}
 
@@ -568,10 +567,12 @@ ul.menu li {
 
 	}
 
-.academyinfo {
+	/*-- Keep Practising --*/
+
+section.academyinfo {
 	width: 100%;
-	margin:0;
-	padding: 16px;
+	margin:0 auto;
+
   }
 
 .practise {
@@ -582,14 +583,202 @@ ul.menu li {
 	width: 100%;
 }
 
+
+.info_item {
+ width: 100%;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ /* padding: 10px; */
+ margin-bottom: 0.75rem;
+ padding: 0;
+}
+
+.info_item p {
+  width: 100%;
+  font-size: 0.75em;
+}
+
+img.desktop_img {
+	display: none;
+}
+
+img.mobile {
+	width: 100%;
+	height: auto;
+
+}
+
+/* Learning */
+
+.learning {
+width: 100%;
+
+}
+
+.learning a {
+width: 100%;
+
 }
 
 
-@media only screen and (min-width: 768px)  {
+
+/* Thesis Exhibit */
+#thesis_exhibit {
+	width: 100%;
+	margin: 0;
+}
+
+#thesis_exhibit h2 {
+font-size: 1.5em;
+letter-spacing: -2px;
+text-align: center;
+font-weight: bold;
+padding: 0;
+}
+
+.promovid {
+width: 100%;
+height: auto;
+overflow: hidden;
+}
+
+.promovid h3 {
+  display: none;
+}
+
+.promovid p {
+	display: none;
+}
+
+.video {
+	display: block;
+}
+
+.exhibit_info {
+	display: none;
+}
+
+
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
 
 	.mobile_menu li {
 		display: none;
-
 	}
 
+
+
+  ul.menu {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    /* padding: 24px; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo.title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-weight: bold;
+    color: rgb(224,224,206);
+    text-decoration: none;
+}
+
+/* Splash */
+.splash img {
+
+  align-self: flex-start;
+}
+
+h1 {
+    font-size: 1.1rem;
+
+  }
+
+  h1 span {
+      font-size: 1.7rem;
+  }
+
+.splash h1 mark {
+  font-size: 2.7rem;
+}
+
+.splash p {
+    font-size: 0.9rem;
+    font-weight: 200;
+    width: 90%;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+/*  Information */
+
+.info_item .mobile {
+ display: none;
+}
+
+.info {
+  justify-content: flex-start;
+}
+.info_item {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 40px 10px;
+    align-items: center;
+    transition: background-color 750ms linear;
+}
+
+.info_item img {
+    display: block;
+    align-self: flex-start;
+}
+
+.info_item h3 {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.info_item p {
+    width: 100%;
+    font-size: 0.75em;
+    padding: 0;
+    margin: 0;
+}
+
+.info_item button {
+    padding: 5px 30px;
+    font-size: 0.65rem;
+    transition: all 400ms linear 50ms;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 2px;
+}
+
+}
+
+@media only screen and (min-width: 1025px) {
+  .mobile_menu li {
+    display: none;
+  }
+
+/* Information */
+
+  .info_item .mobile {
+   display: none;
+  }
 }
