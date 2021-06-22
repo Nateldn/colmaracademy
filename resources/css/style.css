@@ -10,7 +10,7 @@ html {
 }
 
 mark {
-  background-color: rgb(44,43,60);
+  /*background-color: rgb(44,43,60);*/
 }
 
 
@@ -85,13 +85,16 @@ fill: white;
 
 
 ul.menu {
-  display: flex;
+    display: flex;
     list-style-type: none;
-    width: 40%;
+    width: 100%;
     padding: 24px;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
+}
 
+ul.menu li  {
+margin-right: 25px;
 }
 
 
@@ -107,7 +110,6 @@ ul.menu {
 .menu li a:hover, .footlinks a:hover {
   font-size: 1.1rem;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .menu li:last-child {
@@ -116,7 +118,12 @@ ul.menu {
   border-radius: 1px;
   font-weight: bold;
 }
-
+.menu li:last-child a:hover {
+  font-weight: bolder;
+  font-size: 1.2em;
+  padding: 0.9rem 1.3rem;
+  transition: all 600ms linear 0.75ms;
+}
 
 
 /* Splash Image and Text */
@@ -128,8 +135,9 @@ ul.menu {
   justify-content: flex-start;
 	flex-wrap: wrap;
   align-items: center;
-  background-color: rgba(224,224,206, 0.3);
+  background-color: rgb(64,63,76);
 	overflow: hidden;
+  color: white;
 }
 
 .splash img {
@@ -148,20 +156,20 @@ ul.menu {
 h1 {
   font-size: 3.7rem;
   margin-top: 0;
-  padding: 5px;
-  border-bottom: solid 1px rgba(242,175,41, 0.2);
+  padding: 20px;
+color: rgb(224,224,206);
 }
 
 
-h1 span {
+/*h1 span {
   font-size: 2.7rem;
-  /*background-color: rgb(44,43,60);
+  background-color: rgb(44,43,60);
   color: white;*/
 }
 
-.splash h1 mark {
-  font-size: 4.7rem;
-    color: white;
+.splash h1  {
+  font-size: 3.7rem;
+
 }
 
 .splash p {
@@ -333,9 +341,7 @@ p.quotename {
   flex-wrap: wrap;
 }
 
-.learning:hover {
-	color: white;
-}
+
 
 
 .learning a {
@@ -350,12 +356,16 @@ color: rgb(58 58 58);
 transition: all .60s linear;
 border-radius: 2px;
 
+
 }
 
 .learning a:hover {
 	background-color: rgb(44,43,60);
 	color: rgb(224,224,206);
 	font-weight: bold;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 
 
 }
